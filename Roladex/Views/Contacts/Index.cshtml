@@ -1,0 +1,125 @@
+﻿@model IEnumerable<Roladex.Models.Contact>
+
+@{
+    ViewData["Title"] = "Contact List";
+}
+
+<h1>Contact List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address11)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address12)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address1City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address1State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address1Zip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address21)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address22)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address2City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address2State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address2Zip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telephone1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telephone2)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address11)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address12)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address1City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address1State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address1Zip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address21)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address22)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address2City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address2State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address2Zip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telephone1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telephone2)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
